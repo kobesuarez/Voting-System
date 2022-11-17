@@ -1,41 +1,33 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Voting System/stylesheets/admin.css">
-    <title>Administrator</title>
+    <link rel="stylesheet" href="/stylesheets/admin.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="topnav">
-        <img src="/Voting System/cict.png" alt="bla bla" class="img">
-        <div class="title">
-            <p>
-                <h1>Taguig City University</h1>
-                <h3>College of Information Communication and Technology Admin Portal</h3>
-            </p>
+    <div class="login">
+        <div class="loginpanel">
+            <h2 class="title">Computer Science Voting Portal</h2>
+            <h3 class="collegetitle">Taguig City University</h3>
+            <div class="acc">
+                <h3 class="adminlog">Admin Log in</h3>
+                <p class="stno">Student Number</p>
+                <input type="text" id="logintext">
+                <p class="pword">Password</p>
+                <input type="password" id="password"> <br>
+                <div class="save">
+                    <input type="checkbox"><p>Remember Me</p>
+                </div>
+            </div>
+            <button id="login">Log in</button>
+            <p>Forgot Password</p>
         </div>
-        
-        
+        <div class="logo">
+            <img src="/cict.png" class = "imglogo" >
+        </div>
     </div>
-    <div class="sidenav">
-        <ul>
-            <li>Dashboard</li>
-            <li>Voters List</li>
-            <li>Candidates</li>
-        </ul>
-    </div>
-    <div class="dashboard">
-        <div class="position"></div>
-
-        <div class="candidates"></div>
-
-        <div class="voters"></div>
-
-        <div class="taly"></div>
-
-        <div class="graph"></div>
-    </div>
-    
 </body>
 </html>
