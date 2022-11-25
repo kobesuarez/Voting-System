@@ -10,6 +10,7 @@ body{
     color: black;
     background-color: #EDEDED;
     border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .topnav{
@@ -72,6 +73,7 @@ ul{
     width: 61%;
     height: 50%;
     display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .hgraph{
     background-color: #EDEDED;
@@ -80,6 +82,7 @@ ul{
     width: 61%;
     height: 50%;
     display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .vgraph{
     background-color: #EDEDED;
@@ -88,6 +91,7 @@ ul{
     width: 20%;
     height: 100%;
     float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .adminname{

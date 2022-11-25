@@ -1,3 +1,25 @@
+<?php
+    $hostname = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "testadmin";
+    $conn = mysqli_connect($hostname, $username, $password, $dbname);
+    if(!$conn){die("error");}
+
+    if($_POST){
+        $adminuser = $_POST['username'];
+        $adminpass = $_POST['password'];
+
+        $adminuser = mysqli_real_escape_string($conn, $adminuser);
+        $adminpass = mysqli_real_escape_string($conn, $adminpass);
+        $log = "SELECT * FROM admin_acc WHERE uname = '$adminuser' AND upass = '$adminpass'";
+        $_RESULT = mysqli_query($conn, $log);
+        if(mysqli_num_rows($_RESULT) == 1){
+        }else{
+            echo "error";
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

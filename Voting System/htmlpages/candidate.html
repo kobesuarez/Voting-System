@@ -8,7 +8,9 @@
     <script src="/scripts/admin.js"></script>
     <title>Candidate</title>
 </head>
-<body>
+<body id="addcandidate">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    
     <div class="topnav">
         <img src="/cict.png" class="img">
         <div class="title">
@@ -35,17 +37,68 @@
         <div class="list">
             <div class="toplist">
                 <input type="text" placeholder="ex: xx-xxxxx" class = "searchbar">
-                <button class="addbtn">Add</button>
+                <button class="addbtn" v-on:click = "isClicked = !isClicked">Add</button>
                 <button class="sortbtn">Sort</button>
                 <button class="findbtn">Find</button>
             </div>
-            <div class="tablelist">
+            <div class="tablelist"> 
                 
             </div>
         </div>
         <div class="partygraph"></div>
+        
     </div>
-    
+    <div id="add" v-if="isClicked">
+        <div class="addcontainer">
+            <div class="imgbtn">
+                <button id="insertbtn">Insert Image</button>
+            </div>
+            <p>Surname</p>
+            <input type="text" class = "intext"id = "surtext">
+            <p>First name</p>
+            <input type="text" class = "intext" id = "firsttext">
+            <p>Middle Name</p>
+            <input type="text" class = "intext" id = "mntext">
+            <p>Age</p>
+            <input type="text" class = "intext" id = "agetext"><br><br>
+            <input type="radio" name="gender" id="male">Male 
+            <input type="radio" name="gender" id="female" style="margin-left: 30px;">Female
+            <p>Student Number</p>
+            <input type="text" class = "intext" id = "stnotext">
+            <p>Course</p>
+            <input type="text" class = "intext" id = "coursetext">
+            <p>Position Applying</p>
+            <select name="positions" id="position">
+                <option value="President">President</option>
+                <option value="Vice President - Internal">Vice President - Internal</option>
+                <option value="Vice President - External">Vice President - External</option>
+                <option value="General Secretary">General Secretary</option>
+                <option value="Deputy Secretary">Deputy Secretary</option>
+                <option value="Treasurer">Treasurer</option>
+                <option value="Auditor">Auditor</option>
+                <option value="Public Information Officer - Male">Public Information Officer - Male</option>
+                <option value="Public Information Officer - Female">Public Information Officer - Female</option>
+            </select>
+            <p>Partylist:</p>
+            <input type="text" class = "intext" id = "plist">
+        </div>
+        <div class="btns">
+            <button class="applybtn">Apply</button><br>
+            <button class="savebtn">Save</button><br>
+            <button class="cancelbtn" v-on:click = "isClicked = !isClicked">Cancel</button>
+        </div>
+        
+    </div>
+    <script>
+        let add = Vue.createApp({
+            data: function(){
+                return{
+                    isClicked: false
+                }
+            }
+        })
+        add.mount('#addcandidate')
+    </script>
 </body>
 
 </html>

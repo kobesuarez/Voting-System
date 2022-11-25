@@ -69,6 +69,7 @@ ul{
     height: 76vh;
     width: 55vw;
     background-color: #EDEDED;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .partygraph{
     background-color: #EDEDED;
@@ -76,6 +77,7 @@ ul{
     margin: 20px 20px 20px 20px;
     height: 80.7vh;
     width: 20vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .searchbar{
@@ -98,9 +100,65 @@ ul{
     height: 70vh;
     width: 53vw;
 }
+#add{
+    position: absolute;
+    top: 0;
+    margin: 50px 475px 50px 475px;
+    z-index: 1;
+    height: 80vh;
+    width: 40vw;
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: #EDEDED;
+    padding: 30px 30px 10px 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#close{
+    display: none;
+}
+.addcontainer{
+    background-color: white;
+    width: 30vw;
+    padding: 20px 20px 20px 20px;
+}
+.btns, .addcontainer{
+    display: inline-block;
+}
+.intext{
+    background-color: #EDEDED;
+    width: 16vw;
+    height: 2.5vh;
+    padding-left: 10px;
+    border-radius: 25px;
+}
+p{
+    margin-left: 5px;
+    margin-bottom: 0;
+}
+#position{
+    background-color: #EDEDED;
+    border-radius: 25px;
+    height: 3.25vh;
+    width: 17vw;
+    padding-left: 10px;
+}
+.applybtn, .savebtn, .cancelbtn{
+    margin: 0 20px 20px 20px;
+    padding: 5px 20px 5px 20px;
+    float: right;
+    width: 7vw;
+    border-radius: 50px;
+    background-color: #ADADAD;
+    font-weight: bold;
 
-
-
-
-
+}
+.btns{
+    position: absolute;
+    top: 5%;
+}
+.imgbtn{
+    border-radius: 25px;
+    margin-top: 20px;
+    float: right;
+}
 
