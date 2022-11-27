@@ -15,8 +15,11 @@
         $log = "SELECT * FROM admin_acc WHERE uname = '$adminuser' AND upass = '$adminpass'";
         $_RESULT = mysqli_query($conn, $log);
         if(mysqli_num_rows($_RESULT) == 1){
+            header('Location: dashboard.php');
         }else{
-            echo "error";
+            echo '<script language="javascript">';
+            echo 'alert("Wrong Credentials")';
+            echo '</script>';
         }
     }
 ?>
@@ -27,7 +30,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stylesheets/admin.css">
-    <title>Document</title>
+    <title>Administration Login</title>
 </head>
 <body>
     <div class="login">
